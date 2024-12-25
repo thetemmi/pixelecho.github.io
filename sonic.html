@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Pixel<span>Echo</span></h1>
+        </div>
+    </header>
+    <main>
+        <div class="game-container">
+            <iframe id="game-frame" src="https://thetemmi.github.io/pixelecho.github.io/sonic/index.html" frameborder="0"></iframe>
+            <button id="fullscreen-button">Go Fullscreen</button>
+            <p class="game-desc">Sonic the Hedgehog is a fast-paced platformer game where players control Sonic, a blue anthropomorphic hedgehog, as he races through various levels to thwart the evil plans of Dr. Robotnik. The game features high-speed action, iconic loops, and the goal of collecting golden rings while defeating enemies and navigating intricate stages. It was first released by Sega in 1991 and became one of the most iconic video games of its era.</p>
+        </div>
+    </main>
+    <footer>
+        <p>© 2024 PixelEcho. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const fullscreenButton = document.getElementById('fullscreen-button');
+        const gameFrame = document.getElementById('game-frame');
+
+        fullscreenButton.addEventListener('click', () => {
+            if (gameFrame.requestFullscreen) {
+                gameFrame.requestFullscreen();
+            } else if (gameFrame.webkitRequestFullscreen) { /* Safari */
+                gameFrame.webkitRequestFullscreen();
+            } else if (gameFrame.msRequestFullscreen) { /* IE11 */
+                gameFrame.msRequestFullscreen();
+            }
+        });
+    </script>
+</body>
+</html>

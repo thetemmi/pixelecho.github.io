@@ -133,8 +133,8 @@ main {
 
 /* Game Frame */
 iframe#game-frame {
-    width: 100%;
-    height: 600px;
+    width: 100%; /* Adjusted to occupy a larger portion of the screen width */
+    height: 800px; /* Increased height for a larger display area */
     border: 5px solid #ffcc00;
     border-radius: 12px;
 }

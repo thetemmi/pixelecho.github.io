@@ -87,12 +87,6 @@ main {
     margin: 0 auto;
 }
 
-.game-container {
-    text-align: center;
-    width: 100%;
-    max-width: 1400px;
-}
-
 /* Game Card */
 .game-card {
     background: linear-gradient(145deg, #323249, #1e1e30);
@@ -189,6 +183,7 @@ p.game-desc {
     margin-top: 10px;
     color: #ccc;
     line-height: 1.6;
+    text-align: center;
 }
 
 /* Footer */

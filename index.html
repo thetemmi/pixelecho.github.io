@@ -3,42 +3,105 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PixelEcho</title>
+    <title>PixelEcho - Premium Gaming Experience</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <!-- Premium Header -->
+    <header class="glass-container">
         <div class="logo">
-            <h1>Pixel<span>Echo</span></h1>
+            <h1 class="luxury-text">Pixel<span class="gradient-text">Echo</span></h1>
         </div>
     </header>
+
+    <!-- Main Content -->
     <main>
-        <section class="game-section">
-            <div class="game-card">
-                <img src="super_mario.png" alt="Super Mario Bros.">
-                <h2>Super Mario Bros.</h2>
-                <a href="mario.html" class="play-button">Play Now</a>
+        <!-- Premium Game Section -->
+        <section class="game-section glass-container">
+            <!-- Super Mario Card -->
+            <div class="game-card" data-game="mario">
+                <div class="card-content">
+                    <div class="image-container">
+                        <img src="super_mario.png" alt="Super Mario Bros." class="premium-image">
+                    </div>
+                    <h2 class="luxury-text">Super Mario Bros.</h2>
+                    <p class="game-description luxury-text">Experience the classic adventure in stunning HD</p>
+                    <a href="mario.html" class="play-button">
+                        <span class="button-text">Play Now</span>
+                        <span class="button-glow"></span>
+                    </a>
+                </div>
             </div>
-            <div class="game-card">
-                <img src="sonic.png" alt="Sonic the Hedgehog">
-                <h2>Sonic the Hedgehog</h2>
-                <a href="sonic.html" class="play-button">Play Now</a>
+
+            <!-- Sonic Card -->
+            <div class="game-card" data-game="sonic">
+                <div class="card-content">
+                    <div class="image-container">
+                        <img src="sonic.png" alt="Sonic the Hedgehog" class="premium-image">
+                    </div>
+                    <h2 class="luxury-text">Sonic the Hedgehog</h2>
+                    <p class="game-description luxury-text">Speed through remastered levels</p>
+                    <a href="sonic.html" class="play-button">
+                        <span class="button-text">Play Now</span>
+                        <span class="button-glow"></span>
+                    </a>
+                </div>
             </div>
-            <div class="game-card">
-                <img src="tetris.jpg" alt="Tetris World">
-                <h2>Tetris World</h2>
-                <a href="tetris.html" class="play-button">Play Now</a>
+
+            <!-- Tetris Card -->
+            <div class="game-card" data-game="tetris">
+                <div class="card-content">
+                    <div class="image-container">
+                        <img src="tetris.jpg" alt="Tetris World" class="premium-image">
+                    </div>
+                    <h2 class="luxury-text">Tetris World</h2>
+                    <p class="game-description luxury-text">The ultimate puzzle experience</p>
+                    <a href="tetris.html" class="play-button">
+                        <span class="button-text">Play Now</span>
+                        <span class="button-glow"></span>
+                    </a>
+                </div>
             </div>
-            <div class="game-card">
-                <img src="phone.png" alt="phone">
-                <h2>Phone Version</h2>
-                <a href="phone.html" class="play-button">Switch</a>
+
+            <!-- Phone Version Card -->
+            <div class="game-card" data-game="phone">
+                <div class="card-content">
+                    <div class="image-container">
+                        <img src="phone.png" alt="Mobile Experience" class="premium-image">
+                    </div>
+                    <h2 class="luxury-text">Mobile Experience</h2>
+                    <p class="game-description luxury-text">Premium gaming on the go</p>
+                    <a href="phone.html" class="play-button">
+                        <span class="button-text">Switch</span>
+                        <span class="button-glow"></span>
+                    </a>
+                </div>
             </div>
         </section>
     </main>
-    <footer>
-        <p>2024 PixelEcho. MIT License.(thanks freepik for icon)</p>
+
+    <!-- Premium Footer -->
+    <footer class="glass-container">
+        <div class="footer-content">
+            <p class="luxury-text">© 2024 PixelEcho. MIT License.</p>
+            <p class="credits luxury-text">Icons courtesy of Freepik</p>
+        </div>
     </footer>
+
+    <!-- Custom JavaScript for enhanced effects -->
+    <script>
+        // Add mousemove effect to cards
+        document.querySelectorAll('.game-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+    </script>
 </body>
 </html>
